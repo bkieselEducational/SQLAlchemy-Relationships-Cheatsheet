@@ -4,8 +4,7 @@
 
 ```python
 """
-1. One-to-One Relationship
-Example: User and Profile
+First off, let's make sure we have the proper imports and helpers!
 """
 import os
 SCHEMA = os.getenv('SCHEMA')
@@ -19,6 +18,13 @@ def add_prefix_for_prod(attr):
         return f"{SCHEMA}.{attr}"
     else:
         return attr
+```
+
+```python
+"""
+1. One-to-One Relationship
+Example: User and Profile
+"""
 
 class User(db.Model):
     __tablename__ = 'users'
