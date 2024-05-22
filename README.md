@@ -2,10 +2,8 @@
 
 ## Flask SQLAlchemy
 
+### Imports
 ```python
-"""
-First off, let's make sure we have the proper imports and helpers!
-"""
 import os
 SCHEMA = os.getenv('SCHEMA')
 environment = os.getenv('FLASK_ENV')
@@ -20,11 +18,8 @@ def add_prefix_for_prod(attr):
         return attr
 ```
 
+### 1-to-1 Relationship
 ```python
-"""
-1. One-to-One Relationship
-Example: User and Profile
-"""
 
 class User(db.Model):
     __tablename__ = 'users'
