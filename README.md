@@ -90,7 +90,7 @@ db.session.add(course2)
 db.session.commit()
 ```
 
-*Method2*
+*Method 2*
 ```python
 values = [
   { 'student_id': 1, 'course_id': 1 },
