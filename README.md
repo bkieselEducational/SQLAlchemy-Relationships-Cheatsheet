@@ -2,6 +2,13 @@
 
 ## Flask SQLAlchemy
 
+### Attributes
+```
+back_populates -> The name of the relationship on the OTHER model which will be populated with instances of THIS class
+secondary -> The join table to be used for the relationship
+uselist=False -> Setting this to False tells sqlalchemy that when you access the relationship, you will return either a single class instance or None.
+```
+
 ### Imports and Helpers
 ```python
 import os
