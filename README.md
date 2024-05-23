@@ -32,7 +32,7 @@ def add_prefix_for_prod(attr):
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    profile = db.relationship("Profile", uselist=False, back_populates="user", cascade="all, delete-orphan") # uselist=False makes it 1-to-1
+    profile = db.relationship("Profile", uselist=False, back_populates="user", cascade="all, delete") # uselist=False makes it 1-to-1
 
 class Profile(db.Model):
     __tablename__ = 'profiles'
@@ -46,7 +46,7 @@ class Profile(db.Model):
 class Parent(db.Model):
     __tablename__ = 'parents'
     id = db.Column(db.Integer, primary_key=True)
-    children = db.relationship("Child", back_populates="parent", cascade="all, delete-orphan")
+    children = db.relationship("Child", back_populates="parent", cascade="all, delete")
 
 class Child(db.Model):
     __tablename__ = 'children'
