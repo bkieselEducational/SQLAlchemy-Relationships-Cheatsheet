@@ -1,4 +1,4 @@
-# SQLAlchemy-Relationships-Cheatsheet
+# SQLAlchemy Relationships Cheatsheet
 
 ## Flask SQLAlchemy
 
