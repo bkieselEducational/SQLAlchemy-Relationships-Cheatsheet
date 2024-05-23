@@ -102,7 +102,7 @@ db.session.commit()
 values = [
   { 'student_id': 1, 'course_id': 1 },
   { 'student_id': 1, 'course_id': 2 },
-  { 'student_id': 2, 'course_id': 1 },
+  { 'student_id': 2, 'course_id': 1 }
 ]
 
 db.session.execute(student_course_association.insert(), values)
