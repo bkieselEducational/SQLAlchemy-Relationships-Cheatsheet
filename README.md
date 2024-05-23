@@ -4,8 +4,9 @@
 
 ### Attributes
 ```
-back_populates -> The name of the relationship on the OTHER model which will be populated with instances of THIS class
-secondary -> The join table to be used for the relationship
+back_populates -> The name of the relationship on the OTHER model which will be populated with instances of THIS class.
+cascade="all, delete-orphan" -> We want to set this property to ensure that when we delete the row, all rows in other tables that were referencing it through a foreign key are also deleted.
+secondary -> The join table to be used for the relationship.
 uselist=False -> Setting this to False tells sqlalchemy that when you access the relationship, you will return either a single class instance or None.
 ```
 
