@@ -66,12 +66,12 @@ student_course_association = db.Table('student_course',
 class Student(db.Model):
     __tablename__ = 'students'
     id = db.Column(db.Integer, primary_key=True)
-    courses = db.relationship("Course", secondary=student_course_association, back_populates="students")
+    courses = db.relationship("Course", secondary=student_course_association, back_populates="students", cascade="all, delete-orphan")
 
 class Course(db.Model):
     __tablename__ = 'courses'
     id = db.Column(db.Integer, primary_key=True)
-    students = db.relationship("Student", secondary=student_course_association, back_populates="courses")
+    students = db.relationship("Student", secondary=student_course_association, back_populates="courses", cascade="all, delete-orphan")
 ```
 
 ### Seeding the JOIN Table
