@@ -2,7 +2,7 @@
 
 ## Flask SQLAlchemy
 
-### Imports
+### Imports and Helpers
 ```python
 import os
 SCHEMA = os.getenv('SCHEMA')
