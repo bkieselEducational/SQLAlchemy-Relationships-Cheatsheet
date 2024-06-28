@@ -32,7 +32,7 @@ def add_prefix_for_prod(attr):
         return attr
 ```
 
-### One-to-One Relationship
+### One-to-One Relationship (Relatively Rare)
 In this example a User can HAVE 1 Profile and a Profile can BELONG to 1 User.
 ```python
 
